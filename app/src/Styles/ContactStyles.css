@@ -1,0 +1,218 @@
+.formSection {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.formSection h1 {
+    font-size: 2rem;
+    margin-top: 5%;
+    text-shadow: 0 0 10px white, 0 0 20px #19191a;
+}
+
+label {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    margin: auto;
+    min-width: 600px;
+    max-width: 800px;
+    background-color: rgb(15, 15, 15);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #f4f4f4;
+}
+
+.btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: rgb(248, 248, 248);
+    color: #222;
+    border: 1px solid #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.form-wrapper {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-form {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Nest Hub Max */
+@media (max-width: 1280px) {
+    form {
+        min-width: 500px;
+        padding: 3rem 2rem;
+    }
+
+    .formSection h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Nest Hub / iPad Pro */
+@media (max-width: 1024px) {
+    form {
+        min-width: 450px;
+        padding: 3rem 2rem;
+    }
+}
+
+/* Surface Pro 7 */
+@media (max-width: 912px) {
+    form {
+        min-width: 400px;
+    }
+
+    .formSection h1 {
+        font-size: 1.6rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1.1rem;
+    }
+}
+
+/* Asus Zenbook Fold */
+@media (max-width: 853px) {
+    form {
+        min-width: 380px;
+    }
+
+    .formSection h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* iPad Air */
+@media (max-width: 820px) {
+    form {
+        min-width: 350px;
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* iPad Mini */
+@media (max-width: 768px) {
+    form {
+        min-width: 320px;
+    }
+
+    .formSection h1 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+}
+
+/* Surface Duo */
+@media (max-width: 540px) {
+    form {
+        min-width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+        padding: 8px 14px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPhone 14 Pro Max */
+@media (max-width: 430px) {
+    .formSection h1 {
+        font-size: 1.3rem;
+    }
+
+    form {
+        padding: 2rem 0.8rem;
+    }
+}
+
+/* Samsung S20 Ultra / Pixel 7 / iPhone XR */
+@media (max-width: 414px) {
+
+    form input,
+    form textarea {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 24px;
+    }
+}
+
+/* iPhone 12 Pro */
+@media (max-width: 390px) {
+    .formSection h1 {
+        font-size: 1.2rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPhone SE */
+@media (max-width: 375px) {
+    form {
+        padding: 1.8rem 0.8rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.85rem;
+        padding: 7px 10px;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+}
