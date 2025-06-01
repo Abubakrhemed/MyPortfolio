@@ -163,7 +163,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={500}
                                 onClick={() => {
-                                    restartAnimations('..fade-in-form ');
+                                    restartAnimations('.fade-in-form ');
                                     closeSlideNav();
                                 }}
                             >
