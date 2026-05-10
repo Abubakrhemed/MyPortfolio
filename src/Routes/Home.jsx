@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import About from "./About";
-import Experience from "../Routes/Experrience";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
