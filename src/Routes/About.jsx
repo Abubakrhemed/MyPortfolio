@@ -1,98 +1,119 @@
-import React, { useEffect, useRef } from 'react';
-import '../Styles/AboutStyles.css'
-import { IoLogoHtml5 } from "react-icons/io5";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaCss3 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { AiOutlineConsoleSql } from "react-icons/ai";
-import { IoLogoFirebase } from "react-icons/io5";
-import { FaLinux } from "react-icons/fa";
-import { SiArduino } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaRaspberryPi } from "react-icons/fa";
-import { SiAndroidstudio } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import React from "react";
 
 const About = () => {
-  const observerRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const direction = entry.target.getAttribute('data-direction');
-            entry.target.classList.add('animate', `scroll-${direction}`);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    observerRef.current.forEach(el => {
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      observerRef.current.forEach(el => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, []);
-  
-
-  const addToRefs = (el) => {
-    if (el && !observerRef.current.includes(el)) {
-      observerRef.current.push(el);
-    }
-  };
-
   return (
-    <div className='aboutContainer'>
-      <div className="aboutGrid">
-      <div className="right-Card">
-        <h1 >About Me</h1>
-        <p>I'm Abubakr Hemed, a Computer Engineering Technology student at Humber College, currently in the second year of my three year program. I'm actively seeking an 8 month co-op placement for the Fall 2025 to Winter 2026 term, where I can apply my technical skills, passion for innovation, and hands on project experience in a real world environment.
-        </p>
-      </div>
+    <div className="py-24 bg-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              About Me
+            </h2>
+            <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
+              <p>
+                I am a Full-Stack Developer and recent Computer Engineering
+                Technology graduate from Humber Polytechnic, continuing my
+                education in Software Engineering Technology at McMaster
+                University this September. Based in the Greater Toronto Area, I
+                specialize in bridging the gap between complex technical
+                problems and seamless user experiences.
+              </p>
+              <p>
+                My expertise spans across the entire stack. On the frontend, I
+                build dynamic, responsive interfaces using React and Tailwind
+                CSS. On the backend, I engineer robust APIs and scalable
+                architecture utilizing Node.js, C#, and ASP.NET Core.
+              </p>
+              <p>
+                Whether I am developing comprehensive SaaS templates for local
+                enterprises or creating highly optimized development tools, I
+                approach every project with a strong engineering foundation and
+                a consultant's mindset.
+              </p>
+            </div>
+          </div>
 
-      <div className="left-Card">
-        <h1 className="skills-row" data-direction="bottom" ref={addToRefs}> Skills</h1>
+          <div className="bg-slate-900 rounded-2xl p-8 border border-slate-700 shadow-xl">
+            <h3 className="text-2xl font-semibold text-white mb-6">
+              Technical Arsenal
+            </h3>
 
-        <p className="skills-row" data-direction="top" ref={addToRefs}>
-          <span><IoLogoJavascript /> JavaScript</span>
-          <span><IoLogoHtml5 /> HTML</span>
-          <span><FaCss3 /> CSS</span>
-          <span><SiAndroidstudio /> Android Studio</span>
-        </p>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-blue-400 font-medium mb-3">Frontend</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    React
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    TypeScript
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    JavaScript
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Tailwind CSS
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    HTML / CSS
+                  </span>
+                </div>
+              </div>
 
-       <p className="skills-row" data-direction="bottom" ref={addToRefs}>
-          <span>C</span>
-          <span><FaReact /> React</span>
-          <span><AiOutlineConsoleSql /> SQL</span>
-        </p>
+              <div>
+                <h4 className="text-emerald-400 font-medium mb-3">
+                  Backend & Database
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Node.js
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Express.js
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    C#
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    REST APIs
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    PostgreSQL
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    MongoDB
+                  </span>
+                </div>
+              </div>
 
-       <p className="skills-row" data-direction="top" ref={addToRefs}>
-          <span><IoLogoFirebase /> Firebase</span>
-          <span><FaLinux /> Linux</span>
-          <span><SiArduino /> Arduino</span>
-        </p>
-
-       <p className="skills-row" data-direction="bottom" ref={addToRefs}>
-          <span><FaLinux /> Linux</span>
-          <span><SiArduino /> Arduino</span>
-          <span><FaGitAlt /> Git</span>
-        </p>
-
-       <p className="skills-row" data-direction="bottom" ref={addToRefs}>
-          <span><SiAndroidstudio /> Android Studio</span>
-          <span><FaRaspberryPi /> Raspberry Pi</span>
-          <span><FaJava />Java</span>
-        </p>
-      </div>
+              <div>
+                <h4 className="text-purple-400 font-medium mb-3">
+                  Tools & Architecture
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Git / GitHub
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Docker
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Postman
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Vercel
+                  </span>
+                  <span className="bg-slate-800 text-slate-200 px-3 py-1 rounded-md text-sm border border-slate-700">
+                    Automated Testing
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default About;
