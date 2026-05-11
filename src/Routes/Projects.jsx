@@ -14,9 +14,11 @@ const Projects = () => {
               <video
                 className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 controls
-                poster="/flow-thumbnail.png"
+                poster="/lezzet-poster.webp"
+                preload="none"
               >
-                <source src="/flow-demo.mp4" type="video/mp4" />
+                <source src="/lezzetdemo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
               </video>
             </div>
             <div className="p-8">
@@ -56,13 +58,11 @@ const Projects = () => {
 
           <div className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-xl group hover:-translate-y-2 hover:shadow-emerald-500/10 transition-all duration-300">
             <div className="w-full h-64 bg-slate-800 relative overflow-hidden flex items-center justify-center">
-              <video
-                className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                controls
-                poster="/flow-thumbnail.png"
-              >
-                <source src="/flow-demo.mp4" type="video/mp4" />
-              </video>
+              <img
+                src="/flow-poster.webp"
+                alt="Flow Extension Preview"
+                className="object-contain w-[90%] h-[90%] opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+              />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold text-white mb-3">
@@ -89,6 +89,14 @@ const Projects = () => {
                   Chrome APIs
                 </span>
               </div>
+              <a
+                href="https://github.com/Abubakrhemed/Flow-extension"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-2 rounded-lg transition-colors"
+              >
+                View Documentation
+              </a>
             </div>
           </div>
         </div>
