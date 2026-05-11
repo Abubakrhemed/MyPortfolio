@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a
-              href="#home"
+              href="https://abubakrhemed.vercel.app/"
               className="text-2xl font-bold text-blue-500 tracking-tighter"
             >
               AH.
