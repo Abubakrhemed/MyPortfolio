@@ -46,7 +46,7 @@ const Projects = () => {
                 </span>
               </div>
               <a
-                href="https://lezzete.vercel.app/"
+                href="https://lezzet-shawarma.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg transition-colors"
